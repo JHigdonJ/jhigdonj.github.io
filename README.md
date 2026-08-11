@@ -43,3 +43,6 @@ The project page and project card are intentionally separate so the Projects pag
 Publish from `main` / root. The intended site is:
 
 `https://jhigdonj.github.io/`
+
+
+This is still a major work in progress.
