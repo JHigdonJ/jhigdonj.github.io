@@ -3,80 +3,264 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GIS portfolio of Joseph T. Higdon Jr.">
-  <title>Home | Joseph T. Higdon Jr.</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <title>GIS Portfolio | Joseph T. Higdon Jr.</title>
+  <style>
+    :root {
+      --navy: #172a3a;
+      --red: #b22234;
+      --cream: #f7f7f5;
+      --white: #ffffff;
+      --muted: #5f6d79;
+      --line: #d9dde2;
+      --blue: #3c5a78;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 64px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .location-mark {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+
+    .globe {
+      width: 27px;
+      height: 27px;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #53616d;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    main {
+      padding: 82px 0 90px;
+    }
+
+    .intro {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 0.75rem;
+      font-weight: 850;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      margin: 0 0 28px;
+      color: var(--blue);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .intro p {
+      max-width: 790px;
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    .primary {
+      background: var(--red);
+      border-color: var(--red);
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .section-links {
+      margin-top: 65px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .section-links a {
+      padding: 12px 24px 12px 0;
+      border-right: 1px solid var(--line);
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .section-links a:not(:first-child) {
+      padding-left: 24px;
+    }
+
+    .section-links a:last-child {
+      border-right: 0;
+    }
+
+    .section-links span {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px 17px;
+      }
+
+      main {
+        padding: 60px 0;
+      }
+
+      .section-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .section-links a {
+        border: 0;
+        padding: 0 !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <nav class="container navbar">
+      <a class="location-mark" href="#">
+        <svg class="globe" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" fill="none" stroke="#172a3a" stroke-width="1.8"/>
+          <ellipse cx="16" cy="16" rx="6" ry="13" fill="none" stroke="#172a3a" stroke-width="1.5"/>
+          <path d="M3.5 16h25M6 9.5c3 1.7 6.5 2.5 10 2.5s7-.8 10-2.5M6 22.5c3-1.7 6.5-2.5 10-2.5s7 .8 10 2.5" fill="none" stroke="#b22234" stroke-width="1.4"/>
+        </svg>
+        <span>32.74° N&nbsp;&nbsp;|&nbsp;&nbsp;97.11° W</span>
+      </a>
 
-<header class="site-header">
-  <nav class="nav container">
-    <a class="brand" href="index.html">JOSEPH T. HIGDON JR.</a>
-    <div class="nav-links"><a href="index.html" class="active">Home</a><a href="projects.html" class="">GIS Projects</a><a href="education.html" class="">Education</a><a href="about.html" class="">About Me</a><a href="resume.html" class="">Resume</a></div>
-  </nav>
-</header>
-
-
-<main>
-  <section class="hero container">
-    <div class="hero-copy">
-      <p class="eyebrow">WELCOME TO MY GIS PORTFOLIO</p>
-      <h1>Maps, analysis, and <span>spatial problem-solving.</span></h1>
-      <p>
-        Welcome to my GIS portfolio. Here you can explore my previous GIS
-        projects, education history, research and coursework experience,
-        professional background, and résumé.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="projects.html">Explore GIS Projects</a>
-        <a class="button secondary" href="about.html">About Me</a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">GIS Projects</a>
+        <a href="#">Education</a>
+        <a href="#">About Me</a>
+        <a href="#">Resume</a>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <section class="home-panels">
-    <div class="container panel-grid">
-      <a class="panel" href="projects.html">
-        <span class="panel-number">01</span>
-        <h2>GIS Projects</h2>
-        <p>Browse my GIS work, with projects organized by date and category.</p>
-        <span class="arrow">Explore projects →</span>
-      </a>
-      <a class="panel" href="education.html">
-        <span class="panel-number">02</span>
-        <h2>Education</h2>
-        <p>View my education history, research experience, and GIS coursework.</p>
-        <span class="arrow">View education →</span>
-      </a>
-      <a class="panel" href="about.html">
-        <span class="panel-number">03</span>
-        <h2>About Me</h2>
-        <p>Learn more about my background, interests, and professional goals.</p>
-        <span class="arrow">Learn more →</span>
-      </a>
-      <a class="panel" href="resume.html">
-        <span class="panel-number">04</span>
-        <h2>Resume</h2>
-        <p>View or download my current résumé.</p>
-        <span class="arrow">View résumé →</span>
-      </a>
-    </div>
-  </section>
-</main>
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">WELCOME TO MY GIS PORTFOLIO</p>
 
+      <h1>Joseph T. Higdon Jr.</h1>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <p class="footer-title">Let's connect.</p>
-      <p>Questions, opportunities, or just want to talk GIS?</p>
-    </div>
-    <div class="footer-actions">
-      <a class="button secondary" href="mailto:JTHigdonJ@gmail.com">Email Me</a>
-      <a class="button outline" href="https://www.linkedin.com/in/JosephTHigdonJr" target="_blank" rel="noopener">View LinkedIn</a>
-    </div>
-  </div>
-</footer>
+      <p class="subtitle">Environmental Science | Geographic Information Systems</p>
 
+      <p>
+        I'm a University of North Carolina Wilmington graduate with a background
+        in environmental science and a growing professional focus in Geographic
+        Information Systems.
+      </p>
+
+      <p>
+        This portfolio showcases my GIS projects, academic work, research and
+        coursework experience, and professional background. Explore my work to
+        see examples of spatial analysis, cartography, environmental applications,
+        and other GIS skills I've developed through coursework and hands-on projects.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="#">Explore GIS Projects</a>
+        <a class="button secondary" href="#">About Me</a>
+      </div>
+    </section>
+
+    <nav class="section-links">
+      <a href="#"><span>01</span>GIS Projects →</a>
+      <a href="#"><span>02</span>Education →</a>
+      <a href="#"><span>03</span>About Me →</a>
+      <a href="#"><span>04</span>Resume →</a>
+    </nav>
+  </main>
 </body>
 </html>
